@@ -51,6 +51,8 @@
   position: absolute;
   inset: 0;
   z-index: -1;
+  /* 回退：不支持 color-mix 的老浏览器用纯色光晕 */
+  background: radial-gradient(20rem 11rem at 100% 0%, var(--accent-veil), transparent 60%);
   background: radial-gradient(
     20rem 11rem at 100% 0%,
     color-mix(in srgb, var(--tone, var(--accent)) 13%, transparent),
@@ -63,6 +65,7 @@
 a.card:hover,
 a.card:focus-visible {
   transform: translateY(-4px);
+  border-color: var(--accent);
   border-color: color-mix(in srgb, var(--tone, var(--accent)) 40%, var(--border));
   box-shadow: var(--shadow-lg);
 }
@@ -105,6 +108,8 @@ a.card:focus-visible::after {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: var(--r-md);
+  background: var(--accent-veil);
+  border: 1px solid var(--border);
   background: color-mix(in srgb, var(--tone, var(--accent)) 13%, transparent);
   border: 1px solid color-mix(in srgb, var(--tone, var(--accent)) 24%, transparent);
   font-size: 1.3rem;
@@ -178,6 +183,7 @@ a.card:focus-visible .cardGo {
 .catName {
   font-size: 0.72rem;
   font-weight: 650;
+  color: var(--accent-ink);
   color: color-mix(in srgb, var(--tone, var(--accent)) 72%, var(--text-soft));
 }
 
