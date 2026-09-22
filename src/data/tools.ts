@@ -112,6 +112,13 @@ export const TOOLS: readonly Tool[] = [
   },
   {
     cat: 'tool',
+    emoji: '🌐',
+    name: '每日翻译',
+    desc: '每日英语翻译练习，逐句提交，大模型判分与纠错。',
+    href: '/games/utils/translate',
+  },
+  {
+    cat: 'tool',
     emoji: '🩺',
     name: '每日巡检',
     desc: '服务器自动体检 + AI 研判，日报落盘。',
